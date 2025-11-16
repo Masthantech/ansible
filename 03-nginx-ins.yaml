@@ -1,5 +1,6 @@
 - name: installing nginx
   hosts: frontend
+  become:
   tasks:
   - name: installing nginx
     ansible.builtin.package:
@@ -12,4 +13,4 @@
       state: started
 
 
-      
+
