@@ -5,10 +5,10 @@
     MSG: play from vars
   # vars_files:
   # - course.yaml
-  vars_prompt:
-  - name: MSG
-    prompt: enter the msg
-    private: false
+  # vars_prompt:
+  # - name: MSG
+  #   prompt: enter the msg
+  #   private: false
   tasks:
   - name: print the msg
     # vars:
