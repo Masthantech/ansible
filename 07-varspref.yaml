@@ -1,0 +1,17 @@
+- name: vars_preference
+  hosts: local
+  connection: local
+  vars:
+    MSG: play from vars
+  vars_files:
+  - course.yaml
+  vars_prompt:
+  - name: MSG
+    prompt: enter the msg
+    private: false
+  tasks:
+  - name: print the msg
+    vars:
+      MSG: play from tasks
+      ansible.builtin.debug:
+        msg: "{{ MSG }}"     
