@@ -1,0 +1,16 @@
+- name: varsprompt
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: NAME
+    prompt: enter the name
+    private: false
+  - name: AGE
+    prompt: enter the age
+    private: false
+  tasks:
+  - name: print msg
+    ansible.builtin.debug:
+      msg: "Hi, i'm {{ NAME }} and my age is {{ AGE }}"
+      
+         
