@@ -1,0 +1,10 @@
+- name: using varsfile
+  hosts: local
+  connection: local
+  vars_files:
+  - course.yaml
+  tasks:
+  - name: print msg
+    ansible.builin.debug:
+      msg: "Hi i'm {{ NAME }} and my age is {{ AGE }}"
+      
