@@ -5,6 +5,5 @@
   - course.yaml
   tasks:
   - name: print msg
-    ansible.builin.debug:
+    ansible.builtin.debug:
       msg: "Hi i'm {{ NAME }} and my age is {{ AGE }}"
-      
