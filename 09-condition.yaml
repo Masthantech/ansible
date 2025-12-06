@@ -11,5 +11,5 @@
 
   - name: check the nuber is less or equal to hundred
     ansible.builtin.debug:
-      msg: "given number {{ Number }} is grater than 100"
+      msg: "given number {{ Number }} is less than 100"
     when: Number < 100    
