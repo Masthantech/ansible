@@ -1,5 +1,5 @@
 - name: installing softwares
-  hosts: local
+  hosts: frontend
   become: yes
   tasks: 
   - name: installing nginx
