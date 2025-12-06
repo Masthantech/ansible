@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars: 
-    Name: Aman
+    NAME: Aman
     AGE: 22
   tasks: 
   - name: print vars
