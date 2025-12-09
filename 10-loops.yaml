@@ -1,0 +1,11 @@
+- name: loops
+  hosts: local 
+  connection: local
+  tasks:
+  - name: print the course list using loops 
+    ansible.builtin.debug:
+      msg: " {{ item }}" #item is reserver key word used for loops
+    loop:
+    - linux
+    - ansible  
+    - python
