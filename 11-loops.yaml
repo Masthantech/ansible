@@ -4,10 +4,10 @@
   tasks: 
   - name: installing  multiple apps using loops
     ansible.builtin.package:
-      name: "{{  }}"
-      state: "{{  }}"
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     loop:
     - { name: "nginx" , state: "present" } 
     - { name: "ansible" , state: "present"} 
 
-    
+
