@@ -1,0 +1,13 @@
+- name: intsalling apps
+  hosts: frontend
+  become: yes
+  tasks: 
+  - name: installing  multiple apps using loops
+    ansible.builtin.package:
+      name: "{{  }}"
+      state: "{{  }}"
+    loop:
+    - { name: "nginx" , state: "present" } 
+    - { name: "ansible" , state: "present"} 
+
+    
