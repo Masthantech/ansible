@@ -9,7 +9,7 @@
       msg: "given number {{ Number }} is grater than 100"
     when: Number > 100
 
-  - name: check the nuber is less or equal to hundred
+  - name: check the given number is less than  or equal
     ansible.builtin.debug:
-      msg: "given number {{ Number }} is less than 100"
-    when: Number < 100    
+      msg: "given number {{ Number }} less than 100"
+    when: Number < 100  
