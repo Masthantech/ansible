@@ -20,5 +20,14 @@
         live: yes
     ansible.builtin.debug:
       msg: "{{ concepts | dict2items}}"
+  - name: list to map or dict 
+    vars:
+      course:
+      - { 'key': 'name' , 'value':'siva' }
+      - { 'key': 'duration' , 'value':'120hrs' }
+      - { 'key': 'live' , 'value':'true' }
+
+    ansible.builtin.debug:
+      msg: "{{ course | items2dict }}"
 
 
