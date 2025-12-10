@@ -1,9 +1,14 @@
 - name: functions
   hosts: local
   connection: local
-  # vars:
-  #   Name: "Aman,Aisha,Siddiq"
+  vars:
+    Names: "Aman,Aisha,Siddiq"
   tasks: 
   - name: check undefined variables
     ansible.builtin.debug:
       msg: "{{ Name | default('Aman') }}"  
+
+  - name: split string of names with ','
+    ansible.builtin.debug:
+      msg: "{{ Names | split(',') }}"   
+       
