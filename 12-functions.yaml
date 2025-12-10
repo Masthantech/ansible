@@ -11,4 +11,14 @@
   - name: split string of names with ','
     ansible.builtin.debug:
       msg: "{{ Names | split(',') }}"   
-       
+
+  - name: map to item
+    vars:
+      concepts:
+        name: siva
+        duratin: 120 hr
+        live: yes
+    ansible.builtin.debug:
+      msg: "{{ concepts | dict2items}}"
+
+
