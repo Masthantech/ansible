@@ -1,13 +1,21 @@
-- name: intsalling apps
+- name: installing packages
   hosts: frontend
   become: yes
-  tasks: 
-  - name: installing  multiple apps using loops
+  vars:
+    A: aman
+    B: aisha
+  vars_files:
+  - course.yaml
+  vars_prompt:
+  - name: course
+    prompt: pls enter course name
+    private: false  
+  tasks:
+  - name: install apps
     ansible.builtin.package:
-      name: "{{ item.name }}"
+      name: "{{ ite.name }}"
       state: "{{ item.state }}"
     loop:
-    - { name: "nginx" , state: "present" } 
-    - { name: "ansible" , state: "present"} 
-
+    - { name: "nginx" , state: "present"}  
+    - { name: "terraform" , state: "present"}
 
