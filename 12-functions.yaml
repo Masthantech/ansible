@@ -36,3 +36,9 @@
     ansible.builtin.debug:
       msg: "{{ IP | ansible.utils.ipaddr }}"    
 
+  - name: change to upper case
+    vars:
+      NAME: "Aman"   
+    ansible.builtin.debug:
+      msg: "{{ NAME | upper }}"   
+
