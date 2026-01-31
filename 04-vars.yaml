@@ -1,10 +1,13 @@
 - name: using variables
   hosts: local
   connection: local
-  vars: 
-    NAME: Aman
-    AGE: 22
-  tasks: 
+  vars:
+    NAME: khizar
+    AGE: 26
+    SINGLE: yes
+  tasks:
   - name: print vars
     ansible.builtin.debug:
-      msg: "Hi, i am {{ NAME }} and my age is {{ AGE }}"
+      msg: "Hi...i am {{ NAME }}, age is {{ AGE }} and I'm {{ SINGLE }} for now"  
+
+      

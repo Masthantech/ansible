@@ -1,19 +1,24 @@
-- name: installing softwares
+- name: installing nginx softwares
   hosts: frontend
   become: yes
-  tasks: 
-  - name: installing nginx
+  tasks:
+  - name: install nginx softwares
     ansible.builtin.package:
       name: nginx
       state: present
 
-
-  - name: starting the service
-    ansible.builtin.service:
+  - name: start the nginx
+    ansible.become.service:
       name: nginx
       state: started
       enabled: yes
 
+      
+
+
+
+  
+  
 
 
 

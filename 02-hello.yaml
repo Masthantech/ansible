@@ -1,7 +1,7 @@
 - name: hello world greeting
-  hosts: local
-  connection: local #no need for username and password
+  hosts: local # by htis we can run this playbook in our local system
+  connection: local # this allow us to run this whith out providing creds
   tasks: 
-  - name: print hellow world
+  - name: print hello world
     ansible.builtin.debug:
-      msg: "Hello world!"
+      msg: "Hello World!"
