@@ -4,7 +4,7 @@
   vars:
     NAME: khizar
     AGE: 26
-    SINGLE: yes
+    STATUS: Single
   tasks:
   - name: print vars
     ansible.builtin.debug:
