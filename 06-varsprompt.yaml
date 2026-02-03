@@ -2,15 +2,17 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: NAME
-    prompt: enter the name
-    private: false
-  - name: AGE
-    prompt: enter the age
-    private: false
+  - name: USER
+    prompt: please enter the username
+    private: true
+
+  - name: KEY
+    prompt: please enter the KEY
+    private: true
+
   tasks:
-  - name: print msg
+  - name: enter login details
     ansible.builtin.debug:
-      msg: "Hi, i'm {{ NAME }} and my age is {{ AGE }}"
+      msg: "entered credentials are user: {{ USER }} and pass key: {{ KEY }}"    
       
          
