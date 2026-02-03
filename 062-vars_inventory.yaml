@@ -4,4 +4,4 @@
   tasks:
   - name: print vars from inventory
     ansible.builtin.debug:
-      msg: "Hi, I am learning {{ COURSE }}, Duration is {{ TIME }} and the trainer is {{ NAME }}"
+      msg: "Hi, I am learning {{ COURSE }}, Duration is {{ TIME }} and the trainer is {{ TRAINER }}"
