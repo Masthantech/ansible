@@ -1,3 +1,4 @@
 TRAINER: Siva
 TOOL: Ansible
 DURATION: 10
+MSG: play from var files
