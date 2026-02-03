@@ -10,7 +10,8 @@
     prompt: enter the dragon
     private: false
   tasks:
-  vars:
-    MSG: play from tasks
-  ansible.builtin.debug:
-    msg: "{{ MSG }}"    
+  - name: checking the vars preference
+    vars:
+      MSG: play from tasks
+    ansible.builtin.debug:
+      msg: "{{ MSG }}"    
