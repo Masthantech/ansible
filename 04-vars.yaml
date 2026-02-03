@@ -8,6 +8,6 @@
   tasks:
   - name: print vars
     ansible.builtin.debug:
-      msg: "Hi...i am {{ NAME }}, age is {{ AGE }} and I'm {{ SINGLE }} for now"  
+      msg: "Hi...i am {{ NAME }}, age is {{ AGE }} and I'm {{ STATUS }} for now"  
 
       
