@@ -13,7 +13,7 @@
   tasks:
   - name: install apps
     ansible.builtin.package:
-      name: "{{ ite.name }}"
+      name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
     - { name: "nginx" , state: "present"}  

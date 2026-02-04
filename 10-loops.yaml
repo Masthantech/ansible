@@ -10,5 +10,11 @@
     - linux
     - shell  
     - ansible
-    
+  - name: print the objects in the list using loops
+    ansible.builtin.debug:
+      msg:  "{{ item.name }} is {{ item.state }}" 
+
+    loop:
+    - { name: ansible , state: present  }  
+    - { name: terraform , state: absent }
   
