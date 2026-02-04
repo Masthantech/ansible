@@ -1,15 +1,15 @@
 - name : condition
   hosts: local
   connection: local
-  vars: 
-    Number: 70
-  tasks: 
-  - name: check the nuber is bigger is than hundred 
+  vars:
+    NUMBER: 90
+  tasks:
+  - name: check the value is gt or ls
     ansible.builtin.debug:
-      msg: "given number {{ Number }} is grater than 100"
-    when: Number > 100
+      msg: "the given number {{ NUMBER }} is grater than 100"
+    when: NUMBER > 100
 
-  - name: check the given number is less than  or equal
+  - name: check the value is gt or ls
     ansible.builtin.debug:
-      msg: "given number {{ Number }} less than 100"
-    when: Number < 100  
+      msg: "the given number {{ NUMBER }} is less than 100"
+    when: NUMBER < 100      
