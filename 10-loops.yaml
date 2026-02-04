@@ -2,11 +2,13 @@
   hosts: local 
   connection: local
   tasks:
-  - name: print the course list using loops 
+
+  - name: print the course list using loop
     ansible.builtin.debug:
-      msg: " {{ item }}" #item is reserver key word used for loops
+      msg: "{{ item }}"
     loop:
     - linux
-    - ansible  
-    - python
+    - shell  
+    - ansible
     
+  
