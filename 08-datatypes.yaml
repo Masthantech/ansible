@@ -1,20 +1,21 @@
-- name: datatypes
+- name: data types
   hosts: local
   connection: local
   vars:
-    time: 120 #this is number
-    course: "Devsecops with aws" #this is string
-    is_true: true  #this is boolean
-    tools:  # this is list[]
-    - linux
-    - shell
+    COURSE: "devsecops with aws"
+    DURATION: 120 #int
+    IS_LIVE: true #boolean
+    TOOLS: #list
+    - Linux
     - ansible
-    concepts:
-      ci: jenkins
-      scripting: "shell, ansible, terraform, python"
-
-  tasks: 
-  - name: print course information
+    - terraform
+    - docker
+    CONCEPTS:
+      CI: Jenkins
+      SCRIPTING: "shell, ansible, python"
+  tasks:
+  - name: print the data types
     ansible.builtin.debug:
-      msg: "course is: {{ course }}, duration is {{ time }}, is_live?: {{ is_true }}, tools are: {{ tools }},
-         concepts are : {{ concepts }}"    
+      msg: "Couse i am learning is {{ COURSE }}, duration is {{ DURATION }} hours, its {{ IS_LIVE }}. The tools are {{ TOOLS }} and the concepts are {{ CONCEPTS }}"    
+
+  
