@@ -1,0 +1,18 @@
+- name: ansible error handling
+  hosts: local
+  connection: local
+  tasks:
+  - name: check user exists or not
+    ansible.builtin.command: id roboshop
+    register: output
+    ignore_errors: true # we are telling the ansible not to stop the script execution. it continues the script by igoring the errors. we deal with the erros as below in ansible.
+
+  - name: create user
+    become: yes
+    ansible.builtin.command: useradd roboshop
+    when:  output.rc != 0 #when above task fails
+
+  - name: if user alredy exists
+    ansible.builtin.debug:
+      msg: "user alredy exists"  
+    when: output.rc == 0  # when above task fails

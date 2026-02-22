@@ -4,22 +4,25 @@
   vars:
     Names: "Aman,Aisha,Siddiq"
   tasks: 
-  - name: check undefined variables
+  - name: checkundefined variables
     ansible.builtin.debug:
-      msg: "{{ Name | default('Aman') }}"  
+      msg: "{{ NAME | default('Aman') }}"
 
-  - name: split string of names with ','
+
+  - name: split the string of names with ","
+    
     ansible.builtin.debug:
-      msg: "{{ Names | split(',') }}"   
+      msg: "{{ Nmaes | split',' }}"  
 
-  - name: map to item
+  - name: convert dict to list
     vars:
-      concepts:
-        name: siva
-        duratin: 120 hr
-        live: yes
-    ansible.builtin.debug:
-      msg: "{{ concepts | dict2items}}"
+      details:
+        trainer: "Siva"
+        duration: 120
+        live: true
+    ansible.builtin.debug: 
+      msg: "{{ details | dict2items }}" 
+
   - name: list to map or dict 
     vars:
       course:
