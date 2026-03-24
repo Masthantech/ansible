@@ -7,7 +7,7 @@ keyed_groups:
   prefix: "dynamic"
   seperator: "_"
 filters:
-  tag:Name: frontend
+  tag:Name: Frontend
   instance-state-name: running
 
 hostnames:
