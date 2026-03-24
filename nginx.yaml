@@ -1,5 +1,5 @@
 - name: install nginx
-  hosts: dynamic_Frontend
+  hosts: dynamic_frontend
   become: yes
   serial: 2
   tasks: 
@@ -13,5 +13,4 @@
       name: nginx
       state: started
       enabled: yes
-      
-          
+
