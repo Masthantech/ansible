@@ -24,7 +24,7 @@ compose:
 # - us-east-1
 
 # keyed_groups:
-# - key: tag.Name
+# - key: tags.Name
 #   prefix: dynamic
 #   seperator: "_"
 
