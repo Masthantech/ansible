@@ -3,9 +3,10 @@ regions:
 - us-east-1
 
 keyed_groups:
-  key: tag.Name
-  prefix: "dynamic"
-  seperator: "_"
+- key: tag.Name
+  prefix: dynamic
+  seperator: '_'
+
 filters:
   tag:Name: Frontend
   instance-state-name: running
