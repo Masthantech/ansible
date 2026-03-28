@@ -1,9 +1,8 @@
-- name: shaik
-  age: 26
-  height: 5.8
-  status: single
-  address:
-    Flat: 203
-    Area: weavers colony
-    Town: ponnur
-    Pin: 522124
+- name: "Khizar"
+  dob: "1999-09-07"
+  mobileNumber: 1234567890
+  addresses:
+  - flatNumber: 104
+    street: "gandhi nagar"
+    city: hyderabad
+    type: current
