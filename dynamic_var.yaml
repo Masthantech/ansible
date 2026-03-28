@@ -1,0 +1,12 @@
+- name: setting dynamic variable
+  hosts: local
+  connection: local
+  tasks: 
+  - name: reading students.yaml 
+    ansible.builtin.set_fact:
+      student_yaml: "{{ lookup('file' , 'students.yaml') | from_yaml }}"
+
+  - name: convert yaml to json    
+    ansible.builtin.debug:
+      masg: "{{ student_yaml | to_nice_jason}}"
+
