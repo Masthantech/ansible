@@ -1,8 +1,8 @@
-- Name: shaik
-  Age: 26
-  Height: 5.8
-  Status: single
-  Address:
+- name: shaik
+  age: 26
+  height: 5.8
+  status: single
+  address:
     Flat: 203
     Area: weavers colony
     Town: ponnur
